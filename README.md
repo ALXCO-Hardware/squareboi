@@ -9,7 +9,7 @@ Using a handful of off-the-shelf components, it provides the same functionality 
 Additionally, an Arduino-based programmer allows for easy transfer of games and save data.
  
 
-##Features
+## Features
 
 Up to 4MB ROM/32KB RAM storage space
 
@@ -24,14 +24,29 @@ Easy to build: A basic version can be made with entirely through-hole components
 Powered by a single 5V rail
 
 
-##Manual
+## Manual
 
 A thorough explanation of how the system works, and how to assemble it, can be found in the manual file, ![here.](/Manual.pdf)
 
 
-##Acknowledgements
+## Acknowledgements
 
 Squareboi's existence is only possible due to the continued efforts of multiple individuals dedicated to reverse engineering and documenting the Game Boy hardware.
 A full list of those whose work I've built upon can be found within the manual.
 
 Still, I'd like to say it again: Thanks to all of you! I wouldn't have gotten here alone.
+
+## License
+
+Squareboi is the work of a hobbyist – And while significant care was 
+taken to make it reliable, I cannot guarantee that it will work in 
+your specific use case, or that it will be compatible with your 
+hardware.
+
+Squareboi is licensed under the Creative Commons Attribution 4.0 
+International License (CC BY 4.0). 
+https://creativecommons.org/licenses/by/4.0/#deed-conditions
+
+In essence, if you share or adapt this work, you must credit the 
+author (ALXCO), and provide a link to the Squareboi repository, at:
+https://github.com/ALXCO-Hardware/squareboi
