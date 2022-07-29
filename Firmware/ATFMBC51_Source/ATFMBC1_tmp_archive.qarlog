@@ -1,0 +1,24 @@
+Quartus II Archive log --	C:/Users/Areku/Documents/ATFMBC1/ATFMBC1_tmp_archive.qarlog
+
+Archive:	C:/Users/Areku/Documents/ATFMBC1/ATFMBC1_tmp_archive.qar
+Date:		Sun Jan 16 16:08:30 2022
+Quartus II 64-Bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/Areku/Documents/ATFMBC1/ATFMBC1.out.sdc
+C:/Users/Areku/Documents/ATFMBC1/ATFMBC1.qpf
+C:/Users/Areku/Documents/ATFMBC1/ATFMBC1.qsf
+C:/Users/Areku/Documents/ATFMBC1/ATFMBC1.vhd
+C:/Users/Areku/Documents/ATFMBC1/SDC1.sdc
+C:/Users/Areku/Documents/ATFMBC1/incremental_db/compiled_partitions/ATFMBC1.db_info
+c:/altera/13.0sp1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 7 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Sun Jan 16 16:08:31 2022
+Source archive file:	C:/Users/Areku/Documents/ATFMBC1/ATFMBC1_tmp_archive.qar
+Archive was extracted into	C:/Users/Areku/Documents/ATFMBC51/
+		 - successfully.

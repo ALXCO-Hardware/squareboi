@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name gb-cartcon)(type Legacy)(uri C:/Users/Areku/Documents/MBC1cart/gb-cartcon.lib)(options "")(descr ""))
+  (lib (name MBC1Parts)(type Legacy)(uri ${KIPRJMOD}/MBC1Parts.lib)(options "")(descr ""))
+)

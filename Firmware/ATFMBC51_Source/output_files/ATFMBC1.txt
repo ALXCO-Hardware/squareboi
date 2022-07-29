@@ -1,0 +1,26 @@
+Microchip Pof2jed  Version 4.45.1 Mar 13 2018
+Copyright 2018 Microchip. All Rights Reserved.
+
+  EPM7032SLC44-10 --> 1502asPLCC44
+Input file                : C:\Users\Areku\Documents\ATFMBC51_Release\output_files\ATFMBC1.pof
+Output file               : C:\Users\Areku\Documents\ATFMBC51_Release\output_files\ATFMBC1.jed
+Conversion Report file    : C:\Users\Areku\Documents\ATFMBC51_Release\output_files\ATFMBC1.txt
+
+Conversion is completed
+
+Options :  (1502 only)
+   Powerdown :		OFF
+   Security Bit :	AUTO
+   Slew Rate :		AUTO
+   PinClk :		OFF
+   Race Coverage :	ON
+   Pin Keeper :		ON
+   Macrocell Low Power:	ON
+   Power Reset :	ALWAYS
+   ITD on GCLK1 :	ON
+   ITD on GCLK2 :	ON
+   ITD on GCLK3 :	ON
+   Open Collector :	AUTO
+   JTAG mode :		ON
+   TDI Pullup :		OFF
+   TMS Pullup :		OFF

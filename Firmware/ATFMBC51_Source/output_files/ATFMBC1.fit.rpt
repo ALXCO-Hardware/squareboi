@@ -1,0 +1,447 @@
+Fitter report for ATFMBC1
+Mon Jul 04 17:59:49 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. All Package Pins
+ 10. I/O Standard
+ 11. Dedicated Inputs I/O
+ 12. Output Pin Default Load For Reported TCO
+ 13. Fitter Resource Utilization by Entity
+ 14. Control Signals
+ 15. Global & Other Fast Signals
+ 16. Non-Global High Fan-Out Signals
+ 17. Other Routing Usage Summary
+ 18. LAB Macrocells
+ 19. Logic Cell Interconnection
+ 20. Fitter Device Options
+ 21. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Fitter Summary                                                              ;
++---------------------------+-------------------------------------------------+
+; Fitter Status             ; Successful - Mon Jul 04 17:59:49 2022           ;
+; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name             ; ATFMBC1                                         ;
+; Top-level Entity Name     ; ATFMBC1                                         ;
+; Family                    ; MAX7000S                                        ;
+; Device                    ; EPM7032SLC44-10                                 ;
+; Timing Models             ; Final                                           ;
+; Total macrocells          ; 28 / 32 ( 88 % )                                ;
+; Total pins                ; 36 / 36 ( 100 % )                               ;
++---------------------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                              ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Option                                                                     ; Setting         ; Default Value ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Device                                                                     ; EPM7032SLC44-10 ;               ;
+; Use smart compilation                                                      ; Off             ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On              ; On            ;
+; Enable compact report table                                                ; Off             ; Off           ;
+; Optimize Multi-Corner Timing                                               ; Off             ; Off           ;
+; Optimize Timing for ECOs                                                   ; Off             ; Off           ;
+; Regenerate full fit report during ECO compiles                             ; Off             ; Off           ;
+; Optimize IOC Register Placement for Timing                                 ; Normal          ; Normal        ;
+; Fitter Initial Placement Seed                                              ; 1               ; 1             ;
+; Slow Slew Rate                                                             ; Off             ; Off           ;
+; Fitter Effort                                                              ; Auto Fit        ; Auto Fit      ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off             ; Off           ;
++----------------------------------------------------------------------------+-----------------+---------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in C:/Users/Areku/Documents/ATFMBC51_Release/output_files/ATFMBC1.pin.
+
+
++--------------------------------------------------+
+; Fitter Resource Usage Summary                    ;
++------------------------------+-------------------+
+; Resource                     ; Usage             ;
++------------------------------+-------------------+
+; Logic cells                  ; 28 / 32 ( 88 % )  ;
+; Registers                    ; 15 / 32 ( 47 % )  ;
+; Number of pterms used        ; 70                ;
+; I/O pins                     ; 36 / 36 ( 100 % ) ;
+;     -- Clock pins            ; 2 / 2 ( 100 % )   ;
+;     -- Dedicated input pins  ; 2 / 2 ( 100 % )   ;
+;                              ;                   ;
+; Global signals               ; 2                 ;
+; Shareable expanders          ; 0 / 32 ( 0 % )    ;
+; Parallel expanders           ; 0 / 30 ( 0 % )    ;
+; Cells using turbo bit        ; 28 / 32 ( 88 % )  ;
+; Maximum fan-out              ; 25                ;
+; Highest non-global fan-out   ; 25                ;
+; Total fan-out                ; 189               ;
+; Average fan-out              ; 2.95              ;
++------------------------------+-------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                    ;
++---------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; Name    ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; I/O Standard ; Location assigned by ;
++---------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; A[12]   ; 39    ; --       ; 2   ; 9                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; A[13]   ; 20    ; --       ; 1   ; 16                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; A[14]   ; 21    ; --       ; 1   ; 25                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; A[15]   ; 25    ; --       ; 2   ; 16                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; CS_N    ; 4     ; --       ; 1   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; D[0]    ; 24    ; --       ; 2   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; D[1]    ; 27    ; --       ; 2   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; D[2]    ; 26    ; --       ; 2   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; D[3]    ; 28    ; --       ; 2   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; D[4]    ; 29    ; --       ; 2   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; D[5]    ; 41    ; --       ; 2   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; D[6]    ; 37    ; --       ; 2   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; D[7]    ; 33    ; --       ; 2   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; GBCLK   ; 43    ; --       ; --  ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; MBCMODE ; 36    ; --       ; 2   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; RD_N    ; 18    ; --       ; 1   ; 0                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; RESET_N ; 1     ; --       ; --  ; 25                    ; 0                  ; yes    ; no             ; TTL          ; User                 ;
+; TP44    ; 44    ; --       ; --  ; 0                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; WR_N    ; 2     ; --       ; --  ; 15                    ; 0                  ; yes    ; no             ; TTL          ; User                 ;
++---------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                  ;
++----------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; Name     ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++----------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; AA[13]   ; 31    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; AA[14]   ; 19    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; RAM_CS_N ; 34    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; RA[14]   ; 16    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; RA[15]   ; 14    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; RA[16]   ; 11    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; RA[17]   ; 17    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; RA[18]   ; 12    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; RA[19]   ; 9     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; RA[20]   ; 8     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; RA[21]   ; 6     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; RA[22]   ; 5     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; TP40     ; 40    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
++----------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                      ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; User Assignment ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; 1        ; 0          ; --       ; RESET_N        ; input  ; TTL          ;         ; Y               ;
+; 2        ; 1          ; --       ; WR_N           ; input  ; TTL          ;         ; Y               ;
+; 3        ; 2          ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 4        ; 3          ; --       ; CS_N           ; input  ; TTL          ;         ; Y               ;
+; 5        ; 4          ; --       ; RA[22]         ; output ; TTL          ;         ; Y               ;
+; 6        ; 5          ; --       ; RA[21]         ; output ; TTL          ;         ; Y               ;
+; 7        ; 6          ; --       ; TDI            ; input  ; TTL          ;         ; Y               ;
+; 8        ; 7          ; --       ; RA[20]         ; output ; TTL          ;         ; Y               ;
+; 9        ; 8          ; --       ; RA[19]         ; output ; TTL          ;         ; Y               ;
+; 10       ; 9          ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 11       ; 10         ; --       ; RA[16]         ; output ; TTL          ;         ; Y               ;
+; 12       ; 11         ; --       ; RA[18]         ; output ; TTL          ;         ; Y               ;
+; 13       ; 12         ; --       ; TMS            ; input  ; TTL          ;         ; Y               ;
+; 14       ; 13         ; --       ; RA[15]         ; output ; TTL          ;         ; Y               ;
+; 15       ; 14         ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 16       ; 15         ; --       ; RA[14]         ; output ; TTL          ;         ; Y               ;
+; 17       ; 16         ; --       ; RA[17]         ; output ; TTL          ;         ; Y               ;
+; 18       ; 17         ; --       ; RD_N           ; input  ; TTL          ;         ; Y               ;
+; 19       ; 18         ; --       ; AA[14]         ; output ; TTL          ;         ; Y               ;
+; 20       ; 19         ; --       ; A[13]          ; input  ; TTL          ;         ; Y               ;
+; 21       ; 20         ; --       ; A[14]          ; input  ; TTL          ;         ; Y               ;
+; 22       ; 21         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 23       ; 22         ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 24       ; 23         ; --       ; D[0]           ; input  ; TTL          ;         ; Y               ;
+; 25       ; 24         ; --       ; A[15]          ; input  ; TTL          ;         ; Y               ;
+; 26       ; 25         ; --       ; D[2]           ; input  ; TTL          ;         ; Y               ;
+; 27       ; 26         ; --       ; D[1]           ; input  ; TTL          ;         ; Y               ;
+; 28       ; 27         ; --       ; D[3]           ; input  ; TTL          ;         ; Y               ;
+; 29       ; 28         ; --       ; D[4]           ; input  ; TTL          ;         ; Y               ;
+; 30       ; 29         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 31       ; 30         ; --       ; AA[13]         ; output ; TTL          ;         ; Y               ;
+; 32       ; 31         ; --       ; TCK            ; input  ; TTL          ;         ; Y               ;
+; 33       ; 32         ; --       ; D[7]           ; input  ; TTL          ;         ; Y               ;
+; 34       ; 33         ; --       ; RAM_CS_N       ; output ; TTL          ;         ; Y               ;
+; 35       ; 34         ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 36       ; 35         ; --       ; MBCMODE        ; input  ; TTL          ;         ; Y               ;
+; 37       ; 36         ; --       ; D[6]           ; input  ; TTL          ;         ; Y               ;
+; 38       ; 37         ; --       ; TDO            ; output ; TTL          ;         ; Y               ;
+; 39       ; 38         ; --       ; A[12]          ; input  ; TTL          ;         ; Y               ;
+; 40       ; 39         ; --       ; TP40           ; output ; TTL          ;         ; Y               ;
+; 41       ; 40         ; --       ; D[5]           ; input  ; TTL          ;         ; Y               ;
+; 42       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 43       ; 42         ; --       ; GBCLK          ; input  ; TTL          ;         ; Y               ;
+; 44       ; 43         ; --       ; TP44           ; input  ; TTL          ;         ; Y               ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++--------------------------------------------------------------------------------------------------+
+; I/O Standard                                                                                     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; I/O Standard ; Input Vref ; Dedicated Input Pins ; Pins in I/O Bank1 ; Pins in I/O Bank2 ; Total ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; TTL          ; -          ; 4                    ; 0                 ; 0                 ; 4     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+
+
++-----------------------------------------------------------------------+
+; Dedicated Inputs I/O                                                  ;
++---------+-------+-------+-------+--------------+------------+---------+
+; Name    ; Pin # ; Type  ; VCCIO ; I/O Standard ; Input Vref ; Current ;
++---------+-------+-------+-------+--------------+------------+---------+
+; GBCLK   ; 43    ; Input ; --    ; TTL          ; -          ; 0 mA    ;
+; RESET_N ; 1     ; Input ; --    ; TTL          ; -          ; 0 mA    ;
+; TP44    ; 44    ; Input ; --    ; TTL          ; -          ; 0 mA    ;
+; WR_N    ; 2     ; Input ; --    ; TTL          ; -          ; 0 mA    ;
++---------+-------+-------+-------+--------------+------------+---------+
+
+
++-----------------------------------------------+
+; Output Pin Default Load For Reported TCO      ;
++--------------+-------+------------------------+
+; I/O Standard ; Load  ; Termination Resistance ;
++--------------+-------+------------------------+
+; TTL          ; 10 pF ; Not Available          ;
++--------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++-------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                               ;
++----------------------------+------------+------+---------------------+--------------+
+; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+------------+------+---------------------+--------------+
+; |ATFMBC1                   ; 28         ; 36   ; |ATFMBC1            ; work         ;
++----------------------------+------------+------+---------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                    ;
++-------------+----------+---------+--------------+--------+----------------------+------------------+
+; Name        ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ;
++-------------+----------+---------+--------------+--------+----------------------+------------------+
+; A[12]       ; PIN_39   ; 9       ; Clock enable ; no     ; --                   ; --               ;
+; A[13]       ; PIN_20   ; 16      ; Clock enable ; no     ; --                   ; --               ;
+; A[14]       ; PIN_21   ; 25      ; Clock enable ; no     ; --                   ; --               ;
+; A[15]       ; PIN_25   ; 16      ; Clock enable ; no     ; --                   ; --               ;
+; RESET_N     ; PIN_1    ; 25      ; Async. clear ; yes    ; On                   ; --               ;
+; WR_N        ; PIN_2    ; 15      ; Clock        ; yes    ; On                   ; --               ;
+; mbclocked_r ; LC9      ; 1       ; Clock enable ; no     ; --                   ; --               ;
+; mbcmode_r   ; LC4      ; 16      ; Clock enable ; no     ; --                   ; --               ;
++-------------+----------+---------+--------------+--------+----------------------+------------------+
+
+
++------------------------------------------------------------------------+
+; Global & Other Fast Signals                                            ;
++---------+----------+---------+----------------------+------------------+
+; Name    ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
++---------+----------+---------+----------------------+------------------+
+; RESET_N ; PIN_1    ; 25      ; On                   ; --               ;
+; WR_N    ; PIN_2    ; 15      ; On                   ; --               ;
++---------+----------+---------+----------------------+------------------+
+
+
++---------------------------------+
+; Non-Global High Fan-Out Signals ;
++---------------+-----------------+
+; Name          ; Fan-Out         ;
++---------------+-----------------+
+; A[14]         ; 25              ;
+; A[15]         ; 16              ;
+; A[13]         ; 16              ;
+; mbcmode_r     ; 16              ;
+; A[12]         ; 9               ;
+; D[0]          ; 5               ;
+; bankmode_r    ; 5               ;
+; D[1]          ; 3               ;
+; rom_bank_r[1] ; 3               ;
+; rom_bank_r[2] ; 3               ;
+; rom_bank_r[3] ; 3               ;
+; rom_bank_r[4] ; 3               ;
+; D[7]          ; 2               ;
+; D[6]          ; 2               ;
+; D[5]          ; 2               ;
+; D[4]          ; 2               ;
+; D[3]          ; 2               ;
+; D[2]          ; 2               ;
+; GBCLK         ; 2               ;
+; rom_bank_r[0] ; 2               ;
+; rom_bank_r[8] ; 2               ;
+; ram_bank_r[0] ; 2               ;
+; ram_bank_r[1] ; 2               ;
+; MBCMODE       ; 1               ;
+; CS_N          ; 1               ;
+; RA~44         ; 1               ;
+; RA~41         ; 1               ;
+; RA~36         ; 1               ;
+; RA~31         ; 1               ;
+; RA~29         ; 1               ;
+; RA~27         ; 1               ;
+; RA~25         ; 1               ;
+; AA~14         ; 1               ;
+; AA~8          ; 1               ;
+; RA~23         ; 1               ;
+; RAM_CS_N~2    ; 1               ;
+; RA~21         ; 1               ;
+; ram_enable_r  ; 1               ;
+; rom_bank_r[5] ; 1               ;
+; rom_bank_r[6] ; 1               ;
+; rom_bank_r[7] ; 1               ;
+; mbclocked_r   ; 1               ;
+; GBCLK~1       ; 1               ;
++---------------+-----------------+
+
+
++------------------------------------------------+
+; Other Routing Usage Summary                    ;
++-----------------------------+------------------+
+; Other Routing Resource Type ; Usage            ;
++-----------------------------+------------------+
+; Output enables              ; 0 / 6 ( 0 % )    ;
+; PIA buffers                 ; 44 / 72 ( 61 % ) ;
++-----------------------------+------------------+
+
+
++-----------------------------------------------------------------------+
+; LAB Macrocells                                                        ;
++-----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 14.00) ; Number of LABs  (Total = 2) ;
++-----------------------------------------+-----------------------------+
+; 0                                       ; 0                           ;
+; 1                                       ; 0                           ;
+; 2                                       ; 0                           ;
+; 3                                       ; 0                           ;
+; 4                                       ; 0                           ;
+; 5                                       ; 0                           ;
+; 6                                       ; 0                           ;
+; 7                                       ; 0                           ;
+; 8                                       ; 0                           ;
+; 9                                       ; 0                           ;
+; 10                                      ; 0                           ;
+; 11                                      ; 0                           ;
+; 12                                      ; 1                           ;
+; 13                                      ; 0                           ;
+; 14                                      ; 0                           ;
+; 15                                      ; 0                           ;
+; 16                                      ; 1                           ;
++-----------------------------------------+-----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                  ;
++-----+------------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                                ; Output                                                                                                                                                                                            ;
++-----+------------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC9        ; WR_N, RESET_N                                                                                        ; mbcmode_r                                                                                                                                                                                         ;
+;  A  ; LC4        ; WR_N, RESET_N, MBCMODE, mbclocked_r                                                                  ; rom_bank_r[7], rom_bank_r[6], rom_bank_r[5], ram_enable_r, bankmode_r, rom_bank_r[8], rom_bank_r[4], rom_bank_r[3], rom_bank_r[2], rom_bank_r[1], rom_bank_r[0], AA~8, AA~14, RA~36, RA~41, RA~44 ;
+;  A  ; LC3        ; rom_bank_r[7], RESET_N, A[14]                                                                        ; RA[21]                                                                                                                                                                                            ;
+;  A  ; LC2        ; rom_bank_r[8], RESET_N, A[14]                                                                        ; RA[22]                                                                                                                                                                                            ;
+;  A  ; LC14       ; bankmode_r, ram_bank_r[1], mbcmode_r, A[13], A[14], A[15]                                            ; AA[14]                                                                                                                                                                                            ;
+;  A  ; LC10       ; rom_bank_r[1], RESET_N, A[14]                                                                        ; RA[15]                                                                                                                                                                                            ;
+;  A  ; LC7        ; rom_bank_r[2], RESET_N, A[14]                                                                        ; RA[16]                                                                                                                                                                                            ;
+;  A  ; LC12       ; rom_bank_r[3], RESET_N, A[14]                                                                        ; RA[17]                                                                                                                                                                                            ;
+;  A  ; LC8        ; rom_bank_r[4], RESET_N, A[14]                                                                        ; RA[18]                                                                                                                                                                                            ;
+;  A  ; LC6        ; bankmode_r, ram_bank_r[0], RESET_N, mbcmode_r, rom_bank_r[5], A[14]                                  ; RA[19]                                                                                                                                                                                            ;
+;  A  ; LC5        ; bankmode_r, ram_bank_r[1], RESET_N, mbcmode_r, rom_bank_r[6], A[14]                                  ; RA[20]                                                                                                                                                                                            ;
+;  A  ; LC11       ; rom_bank_r[0], RESET_N, A[14], rom_bank_r[4], rom_bank_r[3], rom_bank_r[2], rom_bank_r[1], mbcmode_r ; RA[14]                                                                                                                                                                                            ;
+;  B  ; LC18       ; GBCLK                                                                                                ; TP40                                                                                                                                                                                              ;
+;  B  ; LC21       ; WR_N, RESET_N, D[1], A[14], A[13], A[15]                                                             ; AA~14, RA~41                                                                                                                                                                                      ;
+;  B  ; LC28       ; WR_N, RESET_N, D[0], A[14], A[13], A[15]                                                             ; AA~8, RA~36                                                                                                                                                                                       ;
+;  B  ; LC17       ; WR_N, RESET_N, D[7], A[14], A[13], A[15], mbcmode_r, A[12]                                           ; RA~21                                                                                                                                                                                             ;
+;  B  ; LC32       ; WR_N, RESET_N, D[6], A[14], A[13], A[15], mbcmode_r, A[12]                                           ; RA~41                                                                                                                                                                                             ;
+;  B  ; LC30       ; WR_N, RESET_N, D[5], A[14], A[13], A[15], mbcmode_r, A[12]                                           ; RA~36                                                                                                                                                                                             ;
+;  B  ; LC22       ; WR_N, RESET_N, D[0], D[1], D[2], D[3], mbcmode_r, A[14], A[13], A[15], D[4], D[5], D[6], D[7]        ; RAM_CS_N~2                                                                                                                                                                                        ;
+;  B  ; LC23       ; ram_enable_r, GBCLK, RESET_N, CS_N, A[13], A[14], A[15]                                              ; RAM_CS_N                                                                                                                                                                                          ;
+;  B  ; LC25       ; WR_N, RESET_N, mbcmode_r, D[0], A[14], A[13], A[15], bankmode_r                                      ; bankmode_r, AA~8, AA~14, RA~36, RA~41                                                                                                                                                             ;
+;  B  ; LC24       ; WR_N, RESET_N, D[0], mbcmode_r, A[12], A[14], A[13], A[15], rom_bank_r[8]                            ; rom_bank_r[8], RA~23                                                                                                                                                                              ;
+;  B  ; LC20       ; WR_N, RESET_N, mbcmode_r, D[4], A[14], A[13], A[15], rom_bank_r[4], A[12]                            ; rom_bank_r[4], RA~31, RA~44                                                                                                                                                                       ;
+;  B  ; LC19       ; WR_N, RESET_N, mbcmode_r, D[3], A[14], A[13], A[15], rom_bank_r[3], A[12]                            ; rom_bank_r[3], RA~29, RA~44                                                                                                                                                                       ;
+;  B  ; LC31       ; WR_N, RESET_N, mbcmode_r, D[2], A[14], A[13], A[15], rom_bank_r[2], A[12]                            ; rom_bank_r[2], RA~27, RA~44                                                                                                                                                                       ;
+;  B  ; LC29       ; WR_N, RESET_N, mbcmode_r, D[1], A[14], A[13], A[15], rom_bank_r[1], A[12]                            ; rom_bank_r[1], RA~25, RA~44                                                                                                                                                                       ;
+;  B  ; LC27       ; WR_N, RESET_N, mbcmode_r, D[0], A[14], A[13], A[15], rom_bank_r[0], A[12]                            ; rom_bank_r[0], RA~44                                                                                                                                                                              ;
+;  B  ; LC26       ; bankmode_r, ram_bank_r[0], mbcmode_r, A[13], A[14], A[15]                                            ; AA[13]                                                                                                                                                                                            ;
++-----+------------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Fitter Device Options                                         ;
++----------------------------------------------+----------------+
+; Option                                       ; Setting        ;
++----------------------------------------------+----------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off            ;
+; Enable device-wide reset (DEV_CLRn)          ; Off            ;
+; Enable device-wide output enable (DEV_OE)    ; Off            ;
+; Enable INIT_DONE output                      ; Off            ;
+; Configuration scheme                         ; Passive Serial ;
+; Security bit                                 ; Off            ;
+; Base pin-out file on sameframe device        ; Off            ;
++----------------------------------------------+----------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (119006): Selected device EPM7032SLC44-10 for design "ATFMBC1"
+Warning (15705): Ignored locations or region assignments to the following nodes
+    Warning (15706): Node "TCK" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TDI" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TDO" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TMS" is assigned to location or region, but does not exist in design
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4675 megabytes
+    Info: Processing ended: Mon Jul 04 17:59:50 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
+
+

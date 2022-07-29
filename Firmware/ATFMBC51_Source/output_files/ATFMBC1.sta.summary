@@ -1,0 +1,17 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'WR_AREKU'
+Slack : 0.000
+TNS   : 0.000
+
+Type  : Hold 'WR_AREKU'
+Slack : 5.000
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'WR_AREKU'
+Slack : 1.000
+TNS   : 0.000
+
+------------------------------------------------------------

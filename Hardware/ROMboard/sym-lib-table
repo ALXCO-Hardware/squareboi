@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name ROMboardParts)(type Legacy)(uri ${KIPRJMOD}/ROMboardParts.lib)(options "")(descr ""))
+)

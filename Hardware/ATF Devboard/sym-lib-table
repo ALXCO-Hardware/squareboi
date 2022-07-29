@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name ALXCO)(type Legacy)(uri ${KIPRJMOD}/ALXCO.lib)(options "")(descr ""))
+)

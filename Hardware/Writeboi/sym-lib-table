@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name arduino)(type Legacy)(uri ${KIPRJMOD}/arduino.lib)(options "")(descr ""))
+  (lib (name Gekkio_Connector_Specialized)(type Legacy)(uri ${KIPRJMOD}/Gekkio_Connector_Specialized.lib)(options "")(descr ""))
+  (lib (name GBprogparts)(type Legacy)(uri ${KIPRJMOD}/GBprogparts.lib)(options "")(descr ""))
+)
