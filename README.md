@@ -26,7 +26,7 @@ Powered by a single 5V rail
 
 ## Manual
 
-A thorough explanation of how the system works, and how to assemble it, can be found in the manual file, ![here.](/Manual.pdf)
+A thorough explanation of how the system works, and how to assemble it, can be found in the manual file, [HERE.](/Manual.pdf)
 
 
 ## Acknowledgements
@@ -45,8 +45,8 @@ hardware.
 
 Squareboi is licensed under the Creative Commons Attribution 4.0 
 International License (CC BY 4.0). 
-https://creativecommons.org/licenses/by/4.0/#deed-conditions
+[https://creativecommons.org/licenses/by/4.0/#deed-conditions]
 
 In essence, if you share or adapt this work, you must credit the 
 author (ALXCO), and provide a link to the Squareboi repository, at:
-https://github.com/ALXCO-Hardware/squareboi
+[https://github.com/ALXCO-Hardware/squareboi]
