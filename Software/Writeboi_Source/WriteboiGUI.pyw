@@ -270,7 +270,7 @@ class progmanager(object):
     
         self.readwritetabs = sg.TabGroup(self.readwritelayout)
 
-        self.forcestopbutton = sg.Button("Force Stop", disabled=True)
+        self.forcestopbutton = sg.Button("Force Stop", key="-FORCESTOP-", disabled=True)
 
         self.programmer_layout = [
             [sg.Text("Serial Port:"),self.serialport],
@@ -555,7 +555,16 @@ class progmanager(object):
     def update(self,timeout=None):
         event, values = self.window.read(timeout);
 
-        if not self.busy:
+        ###If we're performing an operation:
+        if self.busy:
+            
+            if event == "-FORCESTOP-":
+                print("stop requested");
+                self.logprint("Stop requested.");
+                self.stoprequested = True;
+
+
+        else:
             if event == sg.WINDOW_CLOSE_ATTEMPTED_EVENT:
                 return 1;
 
@@ -616,13 +625,8 @@ class progmanager(object):
             if event == "Correct Checksum":
                 self.correctchecksum();
                     
-            ###If we're performing an operation:
-            elif self.busy:
-                
-                if event == "-FORCESTOP-":
-                    self.logprint("Stop requested.");
-                    self.stoprequested = True;
-                              
+
+                          
                     
 
         if event == "Save":
