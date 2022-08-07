@@ -17,6 +17,8 @@ Stores save data without needing a battery
 
 Made of common, off-the-shelf parts
 
+Fully compatible with MBC1 and MBC5 mappers, partial support for MBC2 and MBC3
+
 Programmer works as a general purpose cartridge reader
 
 Easy to build: A basic version can be made with entirely through-hole components
