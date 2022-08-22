@@ -1,6 +1,6 @@
  Version 4.45.1 
 JEDEC file for: ATF1502 PLCC44
-Created on: Mon Jul 04 18:02:22 2022
+Created on: Sun Aug 21 22:03:14 2022
 
 *
 QF16808* QP44 * F0*
@@ -425,7 +425,7 @@ L16745 11110*  NOTE GOE0*
 
 NOTE  device configuration bits*
 NOTE    0         0         0         0*
-L16750 00110000000011010011000111111111*
+L16750 00110000000011010011000001111111*
 
 NOTE  Special Purpose Bits (JTAG) *
 L16782 1111*
@@ -436,5 +436,5 @@ L16786 1111111111111111*
 NOTE  Reserved bits *
 L16802 000000*
 
-C8E90*
+C8E30*
 0000
