@@ -38,6 +38,12 @@ A full list of those whose work I've built upon can be found within the manual.
 
 Still, I'd like to say it again: Thanks to all of you! I wouldn't have gotten here alone.
 
+
+## Links
+
+[Squareboi featured on Hackaday](https://hackaday.com/2022/08/16/squareboi-is-the-diy-game-boy-cart-youve-always-wanted/)
+
+
 ## License
 
 Squareboi is the work of a hobbyist – And while significant care was 
