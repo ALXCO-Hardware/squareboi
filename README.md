@@ -41,6 +41,8 @@ Still, I'd like to say it again: Thanks to all of you! I wouldn't have gotten he
 
 ## Links
 
+[Official video assembly guide](https://www.youtube.com/playlist?list=PL5rO9JlAGJ3c4BWqF0iWA5yTH4LZhnxgb)
+
 [Squareboi featured on Hackaday](https://hackaday.com/2022/08/16/squareboi-is-the-diy-game-boy-cart-youve-always-wanted/)
 
 
