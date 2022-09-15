@@ -452,7 +452,7 @@ F 1 "C" V 7139 1950 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 7338 1800 50  0001 C CNN
 F 3 "~" H 7300 1950 50  0001 C CNN
 	1    7300 1950
-	0    1    1    0   
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	7150 1950 7000 1950
@@ -594,7 +594,7 @@ F 1 "C" V 3989 5650 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 4188 5500 50  0001 C CNN
 F 3 "~" H 4150 5650 50  0001 C CNN
 	1    4150 5650
-	0    1    1    0   
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	3750 5400 3750 5650
@@ -604,10 +604,10 @@ Connection ~ 3750 5650
 Wire Wire Line
 	3750 5650 3750 6150
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0109
 U 1 1 62CD4D73
 P 4500 5700
-F 0 "#PWR?" H 4500 5450 50  0001 C CNN
+F 0 "#PWR0109" H 4500 5450 50  0001 C CNN
 F 1 "GND" H 4505 5527 50  0000 C CNN
 F 2 "" H 4500 5700 50  0001 C CNN
 F 3 "" H 4500 5700 50  0001 C CNN

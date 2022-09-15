@@ -991,7 +991,7 @@
   (gr_text 16 (at 33.02 95.25) (layer B.SilkS)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
-  (gr_text TSOP-48 (at 39.37 93.345) (layer F.SilkS)
+  (gr_text TSOP-48 (at 40.005 93.345) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (gr_text RA (at 40.64 50.8) (layer F.SilkS)
