@@ -537,10 +537,8 @@ F 3 "" H 15150 9550 50  0001 C CNN
 	1    15150 9550
 	1    0    0    -1  
 $EndComp
-Text Label 14150 9250 2    50   ~ 0
+Text Label 14000 9250 0    50   ~ 0
 TDO
-Wire Wire Line
-	14300 9250 14150 9250
 $Comp
 L power:+5V #PWR09
 U 1 1 61D96664
@@ -946,13 +944,9 @@ F 3 "~" H 13650 8950 50  0001 C CNN
 	1    13650 8950
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	12950 9350 12950 9550
-Wire Wire Line
-	12950 9350 12900 9350
-Text Label 12900 9350 2    50   ~ 0
+Text Label 14000 9550 0    50   ~ 0
 TDI
-Text Label 13250 9350 2    50   ~ 0
+Text Label 14000 9350 0    50   ~ 0
 TMS
 Text Label 13600 9150 2    50   ~ 0
 TCK
@@ -963,8 +957,6 @@ Wire Wire Line
 Wire Wire Line
 	13650 9150 14300 9150
 Connection ~ 13650 9150
-Wire Wire Line
-	12950 9550 14300 9550
 $Comp
 L power:GND #PWR0103
 U 1 1 61CF9782
@@ -1498,28 +1490,6 @@ Wire Wire Line
 Text Label 6950 6550 2    50   ~ 0
 IO40
 $Comp
-L Device:R R10
-U 1 1 6305FCD5
-P 14900 5850
-F 0 "R10" H 14970 5896 50  0000 L CNN
-F 1 "100K" H 14970 5805 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 14830 5850 50  0001 C CNN
-F 3 "~" H 14900 5850 50  0001 C CNN
-	1    14900 5850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	14900 5700 14900 5650
-Wire Wire Line
-	14900 5650 14550 5650
-Connection ~ 14550 5650
-Wire Wire Line
-	14900 6000 14900 6650
-Wire Wire Line
-	14900 6650 13500 6650
-Text Label 13500 6650 0    50   ~ 0
-RS_N
-$Comp
 L Connector_Generic:Conn_01x01 J12
 U 1 1 63093FFD
 P 1850 5850
@@ -1535,5 +1505,9 @@ RS_N
 Wire Wire Line
 	1300 5850 1650 5850
 Wire Wire Line
-	13250 9350 14300 9350
+	14000 9250 14300 9250
+Wire Wire Line
+	14300 9350 14000 9350
+Wire Wire Line
+	14300 9550 14000 9550
 $EndSCHEMATC
