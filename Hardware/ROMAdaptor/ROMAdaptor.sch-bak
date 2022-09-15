@@ -301,10 +301,10 @@ Text Label 1100 2850 0    50   ~ 0
 A18
 Text Label 1100 3050 0    50   ~ 0
 WR_N
-Text Label 1100 3250 0    50   ~ 0
-A22
-Text Label 1100 3350 0    50   ~ 0
-A24
+Text Label 950  3250 0    50   ~ 0
+ROMCS_N
+Text Label 950  3350 0    50   ~ 0
+RD_N
 Text Label 2700 1050 2    50   ~ 0
 D0
 Text Label 2700 1150 2    50   ~ 0
@@ -337,10 +337,6 @@ Wire Wire Line
 	2500 1150 2700 1150
 Wire Wire Line
 	2700 1050 2500 1050
-Wire Wire Line
-	1300 3350 1100 3350
-Wire Wire Line
-	1100 3250 1300 3250
 Wire Wire Line
 	1300 3050 1100 3050
 Wire Wire Line
@@ -381,4 +377,8 @@ Wire Wire Line
 	1300 1150 1100 1150
 Wire Wire Line
 	1100 1050 1300 1050
+Wire Wire Line
+	950  3250 1300 3250
+Wire Wire Line
+	950  3350 1300 3350
 $EndSCHEMATC
