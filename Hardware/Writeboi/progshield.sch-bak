@@ -792,18 +792,18 @@ Wire Wire Line
 Wire Wire Line
 	10150 5450 10350 5450
 NoConn ~ 10350 5550
-Text Label 1300 5750 0    50   ~ 0
+Text Label 1300 5850 0    50   ~ 0
 DIP_WE_N
-Text Label 1300 5650 0    50   ~ 0
+Text Label 1300 5750 0    50   ~ 0
 DIP_OE_N
-Text Label 1300 5550 0    50   ~ 0
+Text Label 1300 5650 0    50   ~ 0
 DIP_CE_N
-Wire Wire Line
-	1300 5550 1700 5550
 Wire Wire Line
 	1300 5650 1700 5650
 Wire Wire Line
-	1700 5750 1300 5750
+	1300 5750 1700 5750
+Wire Wire Line
+	1700 5850 1300 5850
 $Comp
 L arduino:Arduino_Mega2560_ShieldNOSPI XA1
 U 1 1 61E39D1E
@@ -869,6 +869,6 @@ NoConn ~ 1700 3850
 NoConn ~ 1700 6450
 NoConn ~ 1700 6350
 NoConn ~ 1700 6250
-NoConn ~ 1700 5850
+NoConn ~ 1700 5550
 NoConn ~ 1700 2550
 $EndSCHEMATC
