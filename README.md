@@ -38,6 +38,14 @@ A full list of those whose work I've built upon can be found within the manual.
 
 Still, I'd like to say it again: Thanks to all of you! I wouldn't have gotten here alone.
 
+
+## Links
+
+[Official video assembly guide](https://www.youtube.com/playlist?list=PL5rO9JlAGJ3c4BWqF0iWA5yTH4LZhnxgb)
+
+[Squareboi featured on Hackaday](https://hackaday.com/2022/08/16/squareboi-is-the-diy-game-boy-cart-youve-always-wanted/)
+
+
 ## License
 
 Squareboi is the work of a hobbyist – And while significant care was 
