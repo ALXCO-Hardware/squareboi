@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "ALXCO")(type "KiCad")(uri "${KIPRJMOD}/ALXCO.kicad_sym")(options "")(descr ""))
+)
