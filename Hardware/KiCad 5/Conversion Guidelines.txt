@@ -1,0 +1,21 @@
+Converting a project to KiCad 6:
+
+Base:
+1- Open project with KiCad 6 
+2- Open schematic editor, save.
+3- Open PCB editor, save.
+4- Open Preferences, Manage Symbol Libraries, migrate all project-specific libraries
+5- Open Preferences, Manage Footprint Libraries, migrate all project-specific libraries
+
+3D viewer fix:
+6- open .kicad_pcb file in a text editor, replace all instances of KISYS3DMOD with KICAD6_3DMODEL_DIR
+
+Cleanup:
+7- Delete:
+-backup folder
+-[project].pro
+-[project].sch
+-[project]-cache.lib
+-[project].dcm (if exists)
+
+
