@@ -15,7 +15,9 @@ Cleanup:
 -backup folder
 -[project].pro
 -[project].sch
+-[project].sch-bak
 -[project]-cache.lib
 -[project].dcm (if exists)
+-.lib files for project libraries
 
 
