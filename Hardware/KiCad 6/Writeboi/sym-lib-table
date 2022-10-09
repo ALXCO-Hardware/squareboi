@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name "arduino")(type "KiCad")(uri "${KIPRJMOD}/arduino.kicad_sym")(options "")(descr ""))
+  (lib (name "Gekkio_Connector_Specialized")(type "KiCad")(uri "${KIPRJMOD}/Gekkio_Connector_Specialized.kicad_sym")(options "")(descr ""))
+  (lib (name "GBprogparts")(type "KiCad")(uri "${KIPRJMOD}/GBprogparts.kicad_sym")(options "")(descr ""))
+)
