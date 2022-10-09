@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "gb-cartcon")(type "KiCad")(uri "${KIPRJMOD}/gb-cartcon.kicad_sym")(options "")(descr ""))
+  (lib (name "MBC1Parts")(type "KiCad")(uri "${KIPRJMOD}/MBC1Parts.kicad_sym")(options "")(descr ""))
+)
