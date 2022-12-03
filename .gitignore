@@ -1,0 +1,9 @@
+#Ignore all the backup folders on KICad 6 hardware:
+
+/Hardware/Kicad 6/ATF Devboard/ATF1502BR-backups/
+/Hardware/Kicad 6/Mainboard/Squareboi2-backups/
+/Hardware/Kicad 6/RAMBoard/RAMboard-backups/
+/Hardware/Kicad 6/ROMAdaptor/ROMAdaptor-backups/
+/Hardware/Kicad 6/ROMboard/ROMboard-backups/
+/Hardware/Kicad 6/ROMStackable/ROMboard-backups/
+/Hardware/Kicad 6/Writeboi/progshield-backups/
