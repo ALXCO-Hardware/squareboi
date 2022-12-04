@@ -21,6 +21,10 @@ about_layout = [
 ];
 ##
 
+##Global constants:
+
+firmwareBuildID = 2;
+
 
 
 carttypedict = {
@@ -360,8 +364,8 @@ class progmanager(object):
         else:
             self.logprint("Working file is not long enough to contain a header checksum!");
 
-    def logprint(self,text,end="\n"):
-        self.outputbox.print(text,end=end);
+    def logprint(self, text, end="\n", text_color=None):
+        self.outputbox.print(text,end=end,text_color=text_color);
 
 
     def busyOn(self):
@@ -390,10 +394,20 @@ class progmanager(object):
             except serial.SerialException as err:
                 self.logprint(err);
             else:
+                time.sleep(3);
+                try:
+                    pgID = pgc.getBuildID(self, self.serialtarget);
+                except programmerException:
+                    self.logprint("Could not verify firmware version!");
+                else:
+                    self.logprint("Detected firmware version " + str(pgID) + ".");
+                    if pgID < firmwareBuildID:
+                        self.logprint("WARNING: A new version of the programmer firmware is available. Upgrading is recommended.", text_color = "red");
                 self.serialconnected = True;
                 self.connectstatustext.update(value="Connected", text_color="green");
                 self.connectbutton.update(text="Disconnect");
-                time.sleep(2);
+                
+                
                 self.logprint("Programmer connected.");
             self.busyOff();
 

@@ -8,6 +8,15 @@ class programmerException(Exception):
     pass;
 
 
+def getBuildID(manager,targetdevice):
+    try:     
+        command = "0,0,0\n";
+        targetdevice.write(command.encode('utf-8'));
+        response = int((targetdevice.readline()).decode('utf-8').rstrip(),base=16);
+        return response;
+    except serial.SerialException:
+        manager.logprint("Programmer access denied.");
+        raise programmerException("");
 
 def dumpHeader(manager,targetdevice,interface):
     if interface == "MBC":
