@@ -15,7 +15,7 @@ def getBuildID(manager,targetdevice):
         response = int((targetdevice.readline()).decode('utf-8').rstrip(),base=16);
         return response;
     except serial.SerialException:
-        manager.logprint("Programmer access denied.");
+        manager.logprint("Programmer access denied.", text_color = "red");
         raise programmerException("");
 
 def dumpHeader(manager,targetdevice,interface):
@@ -24,7 +24,7 @@ def dumpHeader(manager,targetdevice,interface):
     elif interface == "DIP":
         commandID = "70,";
     else:
-        manager.logprint("Invalid interface selected: " + str(interface) );
+        manager.logprint("Invalid interface selected: " + str(interface), text_color = "red");
         raise programmerException("");
     try:     
         command = commandID+"0,0\n";
@@ -33,7 +33,7 @@ def dumpHeader(manager,targetdevice,interface):
         targetdevice.readline();
         return response[:];
     except serial.SerialException:
-        manager.logprint("Programmer access denied.");
+        manager.logprint("Programmer access denied.", text_color = "red");
         raise programmerException("");
 
 
@@ -47,7 +47,7 @@ def chipErase(manager,targetdevice,interface,targetIC):
         elif targetIC == "M29":
             commandID = "59,";
         else:
-            manager.logprint("Invalid IC selected: " + str(targetIC));
+            manager.logprint("Invalid IC selected: " + str(targetIC), text_color = "red");
             raise programmerException("");
         
     elif interface == "MBC5":
@@ -59,18 +59,18 @@ def chipErase(manager,targetdevice,interface,targetIC):
             commandID = "69,";
             address = "2097152";
         else:
-            manager.logprint("Invalid IC selected: " + str(targetIC));
+            manager.logprint("Invalid IC selected: " + str(targetIC), text_color = "red");
             raise programmerException("");
         
     elif interface == "DIP":
         if targetIC == "SST":
             commandID = "19,";
         else:
-            manager.logprint("Invalid IC selected: " + str(targetIC));
+            manager.logprint("Invalid IC selected: " + str(targetIC), text_color = "red");
             raise programmerException("");         
         
     else:
-        manager.logprint("Invalid IC selected: " + str(targetIC));
+        manager.logprint("Invalid IC selected: " + str(targetIC), text_color = "red");
         raise programmerException("");
 
     if targetIC == "M29Chip2":
@@ -92,10 +92,10 @@ def chipErase(manager,targetdevice,interface,targetIC):
                 manager.update(timeout=1);
                 
             else:
-                manager.logprint("Erase error.");
+                manager.logprint("Erase error.", text_color = "red");
                 raise programmerException("");
     except serial.SerialException:
-        manager.logprint("Programmer access denied.");
+        manager.logprint("Programmer access denied.", text_color = "red");
         raise programmerException("");
 
 
@@ -108,24 +108,24 @@ def chunkRead(manager,targetdevice,numkb,interface,targetIC,startkb=0):
         if targetIC == "RAM": commandID = "81,";
         elif targetIC == "ROM": commandID = "80,";
         else:
-            manager.logprint("Invalid IC selected.");
+            manager.logprint("Invalid IC selected.", text_color = "red");
             raise programmerException("");
         
     elif interface == "MBC5":
         if targetIC == "RAM": commandID = "91,";
         elif targetIC == "ROM": commandID = "90,";
         else:
-            manager.logprint("Invalid IC selected.");
+            manager.logprint("Invalid IC selected.", text_color = "red");
             raise programmerException("");
         
     elif interface == "DIP": 
         if targetIC == "ROM": commandID = "70,";
         else:
-            manager.logprint("Invalid IC selected.");
+            manager.logprint("Invalid IC selected.", text_color = "red");
             raise programmerException("");
         
     else:
-        manager.logprint("Invalid interface selected: " + str(interface));
+        manager.logprint("Invalid interface selected: " + str(interface), text_color = "red");
         raise programmerException("");
     
     manager.logprint("Starting Chunkread.")
@@ -149,7 +149,7 @@ def chunkRead(manager,targetdevice,numkb,interface,targetIC,startkb=0):
             manager.update(timeout=1);
             targetdevice.readline();
     except serial.SerialException:
-        manager.logprint("Programmer access denied.");
+        manager.logprint("Programmer access denied.", text_color = "red");
         raise programmerException("");
     
     t1 = time.time();
@@ -166,7 +166,7 @@ def chunkWrite(manager,targetdevice,filebytes,numkb,interface,targetIC,erase=Tru
                 try:
                     chipErase(manager,targetdevice,interface,targetIC);
                 except programmerException:
-                    manager.logprint("Erase Failure.");
+                    manager.logprint("Erase Failure.", text_color = "red");
                     raise programmerException("");
             commandID = "82,";
         elif targetIC == "M29":
@@ -174,14 +174,14 @@ def chunkWrite(manager,targetdevice,filebytes,numkb,interface,targetIC,erase=Tru
                 try:
                     chipErase(manager,targetdevice,interface,targetIC);
                 except programmerException:
-                    manager.logprint("Erase Failure.");
+                    manager.logprint("Erase Failure.", text_color = "red");
                     raise programmerException("");
             commandID = "83,";
         elif targetIC == "RAM":
             commandID = "84,";
 
         else:
-            manager.logprint("Invalid IC selected.");
+            manager.logprint("Invalid IC selected.", text_color = "red");
             raise programmerException("");
  
             
@@ -192,7 +192,7 @@ def chunkWrite(manager,targetdevice,filebytes,numkb,interface,targetIC,erase=Tru
                 try:
                     chipErase(manager,targetdevice,interface,targetIC);
                 except programmerException:
-                    manager.logprint("Erase Failure.");
+                    manager.logprint("Erase Failure.", text_color = "red");
                     raise programmerException("");
             commandID = "92,";
         elif targetIC == "M29":
@@ -200,20 +200,20 @@ def chunkWrite(manager,targetdevice,filebytes,numkb,interface,targetIC,erase=Tru
                 try:
                     chipErase(manager,targetdevice,interface,targetIC);
                 except programmerException:
-                    manager.logprint("Erase Failure.");
+                    manager.logprint("Erase Failure.", text_color = "red");
                     raise programmerException("");
                 if startoffset+numkb > 2048:
                     try:
                         chipErase(manager,targetdevice,interface,"M29Chip2");
                     except programmerException:
-                        manager.logprint("Erase Failure on Chip 2.");
+                        manager.logprint("Erase Failure on Chip 2.", text_color = "red");
                         raise programmerException("");
             commandID = "93,";
         elif targetIC == "RAM":
             commandID = "94,";
 
         else:
-            manager.logprint("Invalid IC selected.");
+            manager.logprint("Invalid IC selected.", text_color = "red");
             raise programmerException("");
     
     elif interface == "DIP":
@@ -222,11 +222,11 @@ def chunkWrite(manager,targetdevice,filebytes,numkb,interface,targetIC,erase=Tru
                 if chipErase(manager,targetdevice,interface,targetIC): return 1;
             commandID = "71,";
         else:
-            manager.logprint("Invalid IC selected.");
+            manager.logprint("Invalid IC selected.", text_color = "red");
             raise programmerException("");
         
     else:
-        manager.logprint("Invalid interface selected: " + str(interface));
+        manager.logprint("Invalid interface selected: " + str(interface), text_color = "red");
 
         
     manager.logprint("Starting Chunkwrite.")
@@ -252,12 +252,12 @@ def chunkWrite(manager,targetdevice,filebytes,numkb,interface,targetIC,erase=Tru
             response = int((targetdevice.readline()).decode('utf-8').rstrip(),base=16);
             manager.progbar.update(current_count=curchunk);
             if response != 0:
-                manager.logprint("Write error on chunk "+ str(curchunk+startoffset) + ": " + str(response));
+                manager.logprint("Write error on chunk "+ str(curchunk+startoffset) + ": " + str(response), text_color = "red");
                 raise programmerException("");
             curchunk +=1;
             manager.update(timeout=1);
     except serial.SerialException:
-        manager.logprint("Programmer access denied.");
+        manager.logprint("Programmer access denied.", text_color = "red");
         raise programmerException("");
         
     t1 = time.time();

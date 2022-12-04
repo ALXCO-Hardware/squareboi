@@ -398,11 +398,11 @@ class progmanager(object):
                 try:
                     pgID = pgc.getBuildID(self, self.serialtarget);
                 except programmerException:
-                    self.logprint("Could not verify firmware version!");
+                    self.logprint("Could not verify firmware version!", text_color = "red");
                 else:
                     self.logprint("Detected firmware version " + str(pgID) + ".");
                     if pgID < firmwareBuildID:
-                        self.logprint("WARNING: A new version of the programmer firmware is available. Upgrading is recommended.", text_color = "red");
+                        self.logprint("Warning: A new version of the programmer firmware is available. Upgrading is recommended.", text_color = "red");
                 self.serialconnected = True;
                 self.connectstatustext.update(value="Connected", text_color="green");
                 self.connectbutton.update(text="Disconnect");
@@ -431,9 +431,9 @@ class progmanager(object):
                     self.analyzeROM("Cartridge " + temp_targic);
                 self.busyOff();
             else:
-                self.logprint("Programmer is not connected!");
+                self.logprint("Programmer is not connected!", text_color = "red");
         else:
-            self.logprint("Please fill in all programmer fields first!");
+            self.logprint("Please fill in all programmer fields first!", text_color = "red");
 
     def cartwrite(self,values):
         if "Select..." not in [values["-CARTTYPE-"], values["-INTERFACE-"], values["-TARGETIC-"], ]:
@@ -441,14 +441,14 @@ class progmanager(object):
                 self.busyOn();
 
                 if len(self.workingfile)>(2048*1024) and values["-INTERFACE-"] != "MBC5":
-                    self.logprint("ROMs larger than 2MB are only supported on MBC5!");
+                    self.logprint("ROMs larger than 2MB are only supported on MBC5!", text_color = "red");
                 elif len(self.workingfile)>(512*1024) and values["-TARGETIC-"] == "SST":
-                    self.logprint("ROMs larger than 512KB are not supported on SST39 memory!");
+                    self.logprint("ROMs larger than 512KB are not supported on SST39 memory!", text_color = "red");
                 else:
                     try:
                         pgc.chunkWrite(self,self.serialtarget, self.workingfile, numkb=len(self.workingfile)/1024 ,interface=values["-INTERFACE-"],targetIC=values["-TARGETIC-"],erase=self.erasecheckbox.get() );
                     except programmerException:
-                        self.logprint("Write cycle failure. Data may be corrupt.");
+                        self.logprint("Write cycle failure. Data may be corrupt.", text_color = "red");
                     else:
                         if self.verifycheckbox.get():
                             self.logprint("Verifying written data.");
@@ -461,15 +461,15 @@ class progmanager(object):
                                 if bytearray(tempfile) == self.workingfile:
                                     self.logprint("Verification complete. Data written successfully.");
                                 else:
-                                    self.logprint("Verification failure. Data does not match.");
+                                    self.logprint("Verification failure. Data does not match.", text_color = "red");
                             except programmerException:
-                                self.logprint("Verification failure. Could not confirm integrity of written data.");
+                                self.logprint("Verification failure. Could not confirm integrity of written data.", text_color = "red");
                                 
                 self.busyOff();
             else:
-                self.logprint("Programmer is not connected!");
+                self.logprint("Programmer is not connected!", text_color = "red");
         else:
-            self.logprint("Please fill in all programmer fields first!");
+            self.logprint("Please fill in all programmer fields first!", text_color = "red");
 
 
     def autodetect(self,carttype):
@@ -481,7 +481,7 @@ class progmanager(object):
             try:
                 headerfile = pgc.dumpHeader(self, self.serialtarget, targinterface);
             except programmerException:
-                self.logprint("Could not retrieve cartridge header!");
+                self.logprint("Could not retrieve cartridge header!", text_color = "red");
                 raise programmerException("");
             
             
@@ -561,7 +561,7 @@ class progmanager(object):
             autodetectwindow.close();
             
         except programmerException:
-            self.logprint("Autodetect failure.");
+            self.logprint("Autodetect failure.", text_color = "red");
 
             
 
@@ -573,7 +573,6 @@ class progmanager(object):
         if self.busy:
             
             if event == "-FORCESTOP-":
-                print("stop requested");
                 self.logprint("Stop requested.");
                 self.stoprequested = True;
 
@@ -598,7 +597,7 @@ class progmanager(object):
                     self.autodetect(values["-CARTTYPE-"]);
                     self.busyOff();
                 else:
-                    self.logprint("Programmer is not connected!");
+                    self.logprint("Programmer is not connected!", text_color = "red");
 
             if event == "-CARTREAD-":
                 self.cartread(values);
@@ -650,7 +649,7 @@ class progmanager(object):
                     with open(filepath,'wb') as f:
                         f.write(self.workingfile);
             else:
-                self.logprint("No file loaded!");
+                self.logprint("No file loaded!", text_color = "red");
 
         return 0;
 
