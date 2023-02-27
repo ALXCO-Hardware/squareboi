@@ -25,6 +25,8 @@ Easy to build: A basic version can be made with entirely through-hole components
 
 Powered by a single 5V rail
 
+Compatible with third-party programmers, like the widespread GBxCart RW
+
 
 ## Manual
 
